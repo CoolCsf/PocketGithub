@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+android {
+    compileSdkVersion  buildVersions.targetSdkVersion
+    defaultConfig {
+        applicationId "com.csf.sample"
+        minSdkVersion  buildVersions.minSdkVersion
+        targetSdkVersion  buildVersions.targetSdkVersion
+        versionCode buildVersions.versionCode
+        versionName buildVersions.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.support.appCompat
+    implementation deps.kotlin.stdlib
+    implementation deps.kotlin.coroutines
+    implementation deps.constraint_layout
+    testImplementation deps.junit
+    androidTestImplementation 'androidx.test:runner:1.1.1-beta01'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1-beta01'
+    implementation deps.support.recycleView
+    implementation deps.lifecycle.extensions
+    implementation deps.paging_ktx
+    implementation deps.retrofit.runtime
+    implementation deps.retrofit.gson
+    implementation deps.retrofit.rxjava2
+    implementation deps.rxjava2
+    implementation deps.rxAndroid
+    implementation deps.okhttp_logging_interceptor
+}
