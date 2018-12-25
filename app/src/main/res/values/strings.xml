@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PocketGithub</string>
+    <string name="input_user_name">请输入用户名</string>
+    <string name="input_password">请输入密码</string>
 </resources>

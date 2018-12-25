@@ -42,4 +42,5 @@ dependencies {
     implementation deps.rxjava2
     implementation deps.rxAndroid
     implementation deps.okhttp_logging_interceptor
+    implementation 'com.google.android.material:material:1.1.0-alpha02'
 }
