@@ -1,4 +1,4 @@
-package com.csf.pocketgithub.module.main
+package com.csf.pocketgithub.module.main.view.ui
 
 import com.csf.pocketgithub.R
 import com.csf.pocketgithub.base.BaseActivity
